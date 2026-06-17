@@ -1,0 +1,54 @@
+import numpy as np # import numpy
+
+def f(x, y):
+    return -y + x + 1 #  Define the equation to use to calculate the slope
+
+x0 = 0
+y0 = 1
+
+h = 0.1
+xf = 4 # Declare the intial variables for X and y, the step size and final one for X
+
+x = np.arange(x0, xf + h, h) # create an array for the range of values to be used for x i.e
+# (start, stop, step)
+y = np.zeros(len(x)) # create another array of zeros whose length is the same as the number of elements in x
+
+y[0] = 1 # change the value of the initial Y (y0) to the given value
+
+for i in range(len(x)-1):
+    y[i+1] = y[i] +  h*f(x[i],y[i]) # loop through the eulers formular using a range of the length of array x - 1
+
+
+#print
+print("x\t y")
+print("-----------")
+
+for i in range(len(x)):
+    print(f"{x[i]:.1f}\t{y[i]:.4f}")
+import numpy as np # import numpy
+
+def f(x, y):
+    return -y + x + 1 #  Define the equation to use to calculate the slope
+
+x0 = 0
+y0 = 1
+
+h = 0.1
+xf = 4 # Declare the intial variables for X and y, the step size and final one for X
+
+x = np.arange(x0, xf + h, h) # create an array for the range of values to be used for x i.e
+# (start, stop, step)
+y = np.zeros(len(x)) # create another array of zeros whose length is the same as the number of elements in x
+
+y[0] = 1 # change the value of the initial Y (y0) to the given value
+
+for i in range(len(x)-1):
+    y[i+1] = y[i] +  h*f(x[i],y[i]) # loop through the eulers formular using a range of the length of array x - 1
+
+
+#print
+print("x\t y")
+print("-----------")
+
+for i in range(len(x)):
+    print(f"{x[i]:.1f}\t{y[i]:.4f}")
